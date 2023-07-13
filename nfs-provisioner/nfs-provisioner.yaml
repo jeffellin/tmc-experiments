@@ -1,0 +1,17 @@
+apiVersion: helm.crossplane.io/v1beta1
+kind: Release
+metadata:
+  name: nfs-provisioner
+spec:
+  forProvider:
+    chart:
+      name: nfs-subdir-external-provisioner
+      repository: https://kubernetes-sigs.github.io/
+    namespace: nfs-provisioner
+    set:
+      - name: nfs.server
+        value: 192.168.1.6
+      - name: nfs.path
+        value: /volume2/vmware
+  providerConfigRef:
+    name: helm-provider
