@@ -37,7 +37,7 @@ deployment:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: externaldns-values
+  name: external-dns-values
   namespace: ellin-system
   annotations:
     kapp.k14s.io/change-rule: "delete after deleting externaldns"
