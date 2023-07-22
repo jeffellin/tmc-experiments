@@ -4,4 +4,3 @@ generatorOptions:
   disableNameSuffixHash: true
 resources:
 - test-kapp.yaml
-- ellin-system-namespace.yaml
