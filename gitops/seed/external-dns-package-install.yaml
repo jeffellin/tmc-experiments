@@ -1,7 +1,7 @@
 apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
-  name: contour
+  name: externaldns
   namespace: ellin-system
   annotations:
     kapp.k14s.io/change-group: "externaldns"
@@ -9,7 +9,7 @@ spec:
   packageRef:
     refName: external-dns.tanzu.vmware.com
     versionSelection:
-      constraints: 1.23.5+vmware.1-tkg.1 
+      constraints: 0.12.2+vmware.5-tkg.1
       prereleases: {}
   serviceAccountName: default
   values:
