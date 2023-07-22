@@ -1,0 +1,19 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: contour
+  namespace: contour
+  annotations:
+    kapp.k14s.io/change-group: "contour"
+spec:
+  packageRef:
+    refName: contour.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.23.5+vmware.1-tkg.1 
+      prereleases: {}
+  serviceAccountName: default
+  values:
+  - secretRef:
+      name: contour-values
+
+

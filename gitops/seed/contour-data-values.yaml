@@ -1,0 +1,21 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:yaml", "yaml")
+---
+#@ def config():
+envoy:
+  service: 
+    type: LoadBalancer
+    externalTrafficPolicy: Local
+#@ end
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: contour-values
+  namespace: #@ data.values.contour.namespace
+  annotations:
+    kapp.k14s.io/change-rule: "delete after deleting contour"
+type: Opaque
+stringData:
+  values.yml: #@ yaml.encode(config())
+
