@@ -5,6 +5,8 @@ metadata:
   namespace: default
   annotations:
     kapp.k14s.io/change-group: "contour"
+    kapp.k14s.io/change-rule: "upsert after upserting certmanager"
+
 spec:
   packageRef:
     refName: contour.tanzu.vmware.com

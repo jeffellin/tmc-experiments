@@ -1,0 +1,16 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: contour
+  namespace: default
+  annotations:
+    kapp.k14s.io/change-group: "certmanager"
+spec:
+  packageRef:
+    refName: cert-manager.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.7.2+vmware.3-tkg.3
+      prereleases: {}
+  serviceAccountName: default
+
+
