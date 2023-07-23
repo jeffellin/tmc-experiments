@@ -34,5 +34,5 @@ metadata:
     tanzu-sync.tanzu.vmware.com/variant: sops
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
 spec:
-  fromNamespaces: ellin-system
+  fromNamespace: ellin-system
 ---
