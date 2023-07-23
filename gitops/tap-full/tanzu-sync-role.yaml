@@ -6,6 +6,8 @@ metadata:
   annotations:
     tanzu-sync.tanzu.vmware.com/variant: sops
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+imagePullSecrets:
+  - name: install-registry-dockerconfig
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
