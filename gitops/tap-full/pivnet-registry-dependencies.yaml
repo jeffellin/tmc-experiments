@@ -22,7 +22,7 @@ metadata:
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
 spec:
   toNamespaces:
-  - '*'
+  - tanzu-sync
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
@@ -34,6 +34,5 @@ metadata:
     tanzu-sync.tanzu.vmware.com/variant: sops
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
 spec:
-  toNamespaces:
-  - '*'
+  fromNamespaces: ellin-system
 ---
