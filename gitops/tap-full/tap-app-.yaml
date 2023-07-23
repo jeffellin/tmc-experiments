@@ -24,7 +24,7 @@ spec:
   - sops:
       age:
         privateKeysSecretRef:
-          name: sync-age-identity
+          name: age-key
   - ytt:
       paths:
       - config
