@@ -3,4 +3,6 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
-- test-kapp.yaml
+- ./../contour
+- ./../externaldns
+- ./../certmanager

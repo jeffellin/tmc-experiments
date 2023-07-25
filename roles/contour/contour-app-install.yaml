@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: tmc-tap-full
+  name: tmc-contour
 spec:
   serviceAccountName: default
   fetch:
@@ -15,6 +15,6 @@ spec:
           name: age-key
   - ytt: 
       paths:
-      - gitops/tap-full
+      - gitops/contour
   deploy:
   - kapp: {}

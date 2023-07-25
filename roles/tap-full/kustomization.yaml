@@ -4,3 +4,4 @@ generatorOptions:
   disableNameSuffixHash: true
 resources:
 - test-kapp.yaml
+- ./../externaldns

@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: config-with-sops
+  name: certmanager-config
 spec:
   serviceAccountName: default
   fetch:
@@ -15,6 +15,6 @@ spec:
           name: age-key
   - ytt: 
       paths:
-      - gitops/seed
+      - gitops/cert-manager
   deploy:
   - kapp: {}
