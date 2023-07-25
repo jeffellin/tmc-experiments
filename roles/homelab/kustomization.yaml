@@ -3,6 +3,7 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 resources:
+- ./../base
 - ./../contour
 - ./../externaldns
 - ./../certmanager
