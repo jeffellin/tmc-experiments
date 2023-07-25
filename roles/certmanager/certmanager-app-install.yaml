@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: certmanager-config
+  name: tmc-certmanager
 spec:
   serviceAccountName: default
   fetch:

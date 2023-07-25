@@ -15,6 +15,6 @@ spec:
           name: age-key
   - ytt: 
       paths:
-      - gitops/externaldns
+      - gitops/external-dns
   deploy:
   - kapp: {}
