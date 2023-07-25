@@ -1,5 +1,10 @@
 apiVersion: v1
-kind: Namespace
+kind: Pod
 metadata:
-  name: ellin-system-resources
-
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
