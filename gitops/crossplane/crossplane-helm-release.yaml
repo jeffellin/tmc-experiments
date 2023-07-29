@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: crossplane-release
+  namespace: tanzu-helm-resources
+  annotations:
+    kapp.k14s.io/change-group: "crossplane/helm-install"
+    kapp.k14s.io/change-rule: "upsert after upserting crossplane/helm-repo"
+spec:
+spec:
+  chart:
+    spec:
+      chart: crossplane
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: crossplane
+      version: 1.12.2
+  install:
+    createNamespace: true
+  interval: 10m0s

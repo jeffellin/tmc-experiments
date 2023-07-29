@@ -1,0 +1,10 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-aws
+  annotations:
+    kapp.k14s.io/change-group: "crossplane/crossplane"
+    kapp.k14s.io/change-rule: "upsert after upserting crossplane/config"
+spec:
+spec:
+  package: xpkg.upbound.io/upbound/provider-aws:v0.37.0

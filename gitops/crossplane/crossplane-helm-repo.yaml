@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: crossplane
+  namespace: tanzu-helm-resources
+  annotations:
+    kapp.k14s.io/change-group: "crossplane/repo"
+spec:
+  interval: 10m0s
+  provider: generic
+  timeout: 60s
+  url: https://charts.crossplane.io/stable
