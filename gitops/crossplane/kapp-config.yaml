@@ -6,6 +6,9 @@ waitRules:
   - type: Healthy
     status: "True"
     success: true
+  - type: Healthy
+    status: "False"
+    failed: true
   resourceMatchers:
   - apiVersionKindMatcher: {apiVersion: "pkg.crossplane.io/v1", kind: "Provider"}
 - supportsObservedGeneration: true
@@ -13,5 +16,8 @@ waitRules:
   - type: Ready
     status: "True"
     success: true
+  - type: Ready
+    status: "False"
+    failed: true
   resourceMatchers:
-  - apiVersionKindMatcher: {apiVersion: "pkg.crossplane.io/v1", kind: "Provider"}
+  - apiVersionKindMatcher: {apiVersion: "helm.toolkit.fluxcd.io/v2beta1", kind: "HelmRelease"}

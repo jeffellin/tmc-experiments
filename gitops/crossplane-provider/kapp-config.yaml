@@ -1,0 +1,13 @@
+apiVersion: kapp.k14s.io/v1alpha1
+kind: Config
+waitRules:
+- supportsObservedGeneration: true
+  conditionMatchers:
+  - type: Healthy
+    status: "True"
+    success: true
+  - type: Healthy
+    status: "False"
+    failed: true
+  resourceMatchers:
+  - apiVersionKindMatcher: {apiVersion: "pkg.crossplane.io/v1", kind: "Provider"}
