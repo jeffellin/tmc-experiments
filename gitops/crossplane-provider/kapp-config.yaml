@@ -1,7 +1,7 @@
 apiVersion: kapp.k14s.io/v1alpha1
 kind: Config
 waitRules:
-- supportsObservedGeneration: true
+- supportsObservedGeneration: false
   conditionMatchers:
   - type: Healthy
     status: "True"
