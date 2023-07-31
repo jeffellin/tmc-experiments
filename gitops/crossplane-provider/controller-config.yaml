@@ -6,7 +6,6 @@ metadata:
     kapp.k14s.io/change-group: "crossplane/config"
     kapp.k14s.io/change-rule: "upsert after upserting crossplane/helm-install"
 spec:
-spec:
   args: 
     - --max-reconcile-rate=100
     - --provider-ttl=250
