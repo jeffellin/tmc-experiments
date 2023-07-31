@@ -7,3 +7,4 @@ resources:
 - ./../contour
 - ./../externaldns
 - ./../certmanager
+- ./../crossplane

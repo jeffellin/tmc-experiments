@@ -1,0 +1,20 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: tmc-crossplane
+spec:
+  serviceAccountName: default
+  fetch:
+  - git:
+      url: https://github.com/jeffellin/tmc-experiments
+      ref: main
+  template:
+  - sops:
+      age:
+        privateKeysSecretRef:
+          name: age-key
+  - ytt: 
+      paths:
+      - gitops/crossplane
+  deploy:
+  - kapp: {}

@@ -3,7 +3,7 @@ kind: Provider
 metadata:
   name: provider-aws
   annotations:
-    kapp.k14s.io/change-group: "crossplane/crossplane"
+    kapp.k14s.io/change-group: "crossplane/aws-provider"
     kapp.k14s.io/change-rule: "upsert after upserting crossplane/config"
 spec:
 spec:
