@@ -3,5 +3,5 @@ default:
   - cert-manager
 k3s-local:
   - external-dns
-  - cert-maanager
+  - cert-manager
   - minio
