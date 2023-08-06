@@ -44,16 +44,3 @@ spec:
     - targetPort: 80
       port: 80
 ---
-apiVersion: projectcontour.io/v1
-kind: HTTPProxy
-metadata:
-  name: nginx-test
-spec:
-  virtualhost:
-    fqdn: nginx.lab.ellin.net
-  routes:
-  - conditions:
-    - prefix: /
-    services:
-    - name: nginx-backend
-      port: 80
