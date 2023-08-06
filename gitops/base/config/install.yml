@@ -24,9 +24,9 @@ spec:
       ref: main
   template:
   - sops: 
-    age:
-      privateKeysSecretRef:
-        name: sync-age-identity
+      age:
+        privateKeysSecretRef:
+          name: sync-age-identity
   - ytt:
       paths:
       - #@ "gitops/" + val
