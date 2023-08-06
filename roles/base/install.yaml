@@ -40,6 +40,7 @@ metadata:
   name: cluster-name-secret
   namespace: vmware-system-tmc
 spec:
+  serviceAccountName: input-resource-reader # used to fetch input resources
   inputResources:
   - name: config
     ref:
