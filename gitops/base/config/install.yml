@@ -23,6 +23,10 @@ spec:
       url: https://github.com/jeffellin/tmc-experiments
       ref: main
   template:
+  - sops: 
+    age:
+      privateKeysSecretRef:
+        name: sync-age-identity
   - ytt:
       paths:
       - #@ "gitops/" + val
