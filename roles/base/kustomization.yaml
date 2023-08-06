@@ -1,2 +1,30 @@
 resources:
 - install.yaml
+patchesJson6902:
+  - target:
+      group: ""
+      version: v1
+      kind: ServiceAccount
+      name: input-resource-reader
+    patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: vmware-system-tmc
+  - target:
+      group: ""
+      version: v1
+      kind: RoleBinding
+      name: input-resource-reader
+    patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: vmware-system-tmc
+  - target:
+      group: ""
+      version: v1alpha1
+      kind: SecretTemplate
+      name: input-resource-reader
+    patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: vmware-system-tmc
