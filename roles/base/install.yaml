@@ -51,7 +51,8 @@ spec:
     type: generic
     stringData:
       values.yaml: |-
-        clusteri_name: $(.config.data.cluster_name)
+        cluster_name: $(.config.data.cluster_name)
+        job: "foo"
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
