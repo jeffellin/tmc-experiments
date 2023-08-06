@@ -1,11 +1,6 @@
-#@ load("@ytt:overlay", "overlay")
-#@data/values
----
-#@overlay/match missing_ok=True
 default:
   - external-dns
   - cert-manager
-#@overlay/match missing_ok=True
 k3s-local:
   - external-dns
   - cert-maanager
