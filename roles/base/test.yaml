@@ -1,0 +1,20 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: tmc-base-customization-app
+spec:
+  serviceAccountName: default
+  fetch:
+  - git:
+      url: https://github.com/jeffellin/tmc-experiments
+      ref: main
+  template:
+  - ytt:
+      paths:
+      - gitops/base/config
+      valuesFrom:
+      - secretRef:
+          name: cluster-name-secret  
+      - path:  gitops/base/values/values.yaml
+  deploy:
+  - kapp: {}

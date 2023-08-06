@@ -1,0 +1,34 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:struct", "struct")
+#@ server = data.values.cluster_name
+#@ def some_data():
+#@   if hasattr(data.values,server):
+#@     return data.values[server]
+#@   else:
+#@    return data.values["default"]
+#@   end
+#@ end
+#@ for val in some_data():
+---
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: #@ "tmc-gitops-"+val
+  labels:
+     clusterName: #@ server
+spec:
+  serviceAccountName: default
+  fetch:
+  - git:
+      url: https://github.com/jeffellin/tmc-experiments
+      ref: main
+  template:
+  - ytt:
+      paths:
+      - #@ "gitops/" + val
+      valuesFrom:
+      - secretRef:
+          name: cluster-name-secret
+  deploy:
+  - kapp: {}
+ #@ end
