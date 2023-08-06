@@ -50,7 +50,8 @@ spec:
   template:
     type: generic
     stringData:
-      cluster_name: $(.config.data.cluster_name)
+      values.yaml: |-
+        clusteri_name: $(.config.data.cluster_name)
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
