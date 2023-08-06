@@ -1,0 +1,24 @@
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretTemplate
+metadata:
+  name: cluster-name-secret
+  namespace: vmware-system-tmc
+spec:
+  inputResources:
+  - name: config
+    ref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: stack-config
+  template:
+    type: generic
+    stringData:
+      cluster_name: $(.config.data.cluster_name)
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretExport
+metadata:
+  name: cluster-name-secret
+  namespace: vmware-system-tmc
+spec:
+  toNamespace: '*'
