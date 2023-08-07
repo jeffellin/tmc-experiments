@@ -1,21 +1,23 @@
 #@ load("@ytt:data", "data")
 #@ load("@ytt:struct", "struct")
 #@ server = data.values.cluster_name
-#@ def some_data():
-#@   if hasattr(data.values,server) and hasattr(data.values[server].profiles):
-#@     return data.values[server].profiles
+#@   if hasattr(data.values,server) and hasattr(data.values[server],"roles"):
+#@     selected=server
 #@   else:
-#@    return data.values["default"].profiles
-#@   end
+#@    selected="default"
+#@  end
+#@ def some_data():
+#@     return data.values[selected].roles
 #@ end
 #@ for val in some_data():
 ---
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: #@ "tmc-gitops-"+val
+  name: #@ "tmc-gitops-"+val.name
   labels:
      clusterName: #@ server
+     configuration:  #@ selected
 spec:
   serviceAccountName: default
   fetch:
@@ -29,7 +31,7 @@ spec:
           name: age-key
   - ytt:
       paths:
-      - #@ "gitops/" + val
+      - #@ "gitops/" + val.name
       valuesFrom:
       - secretRef:
           name: cluster-name-secret
