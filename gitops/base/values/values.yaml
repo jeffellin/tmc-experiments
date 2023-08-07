@@ -14,6 +14,7 @@ k3s-local:
     domain: minio.lab.ellin.net
 tap:
   roles:
+    - name: external-dns 
     - name: tap-full
   options:
     domain: tapdemo.lab.ellin.net
