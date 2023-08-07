@@ -18,6 +18,7 @@ metadata:
   labels:
      clusterName: #@ server
      configuration:  #@ selected
+     foo: bar
 spec:
   serviceAccountName: default
   fetch:
