@@ -2,7 +2,7 @@
 #@ load("@ytt:struct", "struct")
 #@ server = data.values.cluster_name
 #@ def some_data():
-#@   if hasattr(data.values,server) and hasattr(data.values[server].profiles)):
+#@   if hasattr(data.values,server) and hasattr(data.values[server].profiles):
 #@     return data.values[server].profiles
 #@   else:
 #@    return data.values["default"].profiles
