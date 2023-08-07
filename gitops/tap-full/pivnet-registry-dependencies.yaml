@@ -1,6 +1,19 @@
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
+  name: tanzu-gitops
+  namespace: ellin-system
+  annotations:
+    kapp.k14s.io/change-group: install-registry-export
+    tanzu-sync.tanzu.vmware.com/variant: sops
+    tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+spec:
+  toNamespaces:
+  - '*'
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretExport
+metadata:
   name: install-registry-dockerconfig
   namespace: tanzu-sync
   annotations:
@@ -33,6 +46,14 @@ metadata:
     kapp.k14s.io/change-group: install-registry-export
     tanzu-sync.tanzu.vmware.com/variant: sops
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+spec:
+  fromNamespace: ellin-system
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretImport
+metadata:
+  name: tanzu-gitops
+  namespace: tanzu-sync
 spec:
   fromNamespace: ellin-system
 ---
