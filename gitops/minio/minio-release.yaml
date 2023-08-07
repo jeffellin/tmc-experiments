@@ -1,3 +1,4 @@
+#@ load("@ytt:data", "data")
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -22,7 +23,7 @@ spec:
     ingress:
       enabled: true
       ingressClassName: traefik
-      hostname: minio.lab.ellin.net
+      hostname: #@ data.values.domain
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-contour-cluster-issuer
         traefik.ingress.kubernetes.io/router.entrypoints: websecure

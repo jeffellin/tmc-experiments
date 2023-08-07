@@ -35,7 +35,8 @@ spec:
       valuesFrom:
       - secretRef:
           name: cluster-name-secret
-      - path: gitops/base/values/values.yaml
+      - secretRef:
+          name: tanzu-gitops
   deploy:
   - kapp: {}
  #@ end
