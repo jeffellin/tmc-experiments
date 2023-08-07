@@ -17,4 +17,7 @@ eks.aws-june23.us-east-2.test:
     - name: external-dns 
     - name: tap-full
   options:
-    domain: tapdemo.lab.ellin.net
+    tap_install:
+      values:
+        cnrs:
+          domain_name: something.lab.ellin.net
