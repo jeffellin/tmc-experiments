@@ -1,14 +1,18 @@
 default:
-   roles:
+  roles:
    - name: external-dns
    - name: cert-manager
+  options:
+    domain: default
 k3s-local:
   roles:
    - name: external-dns
    - name: cert-manager
    - name: minio
+  options:
+    minio: install
 tap:
-  profiles:
+  roles:
     - name: tap-full
-      options:
-        domain: tapdemo.lab.ellin.net
+  options:
+    domain: tapdemo.lab.ellin.net
