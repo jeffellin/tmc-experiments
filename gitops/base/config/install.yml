@@ -35,7 +35,7 @@ spec:
       valuesFrom:
       - secretRef:
           name: cluster-name-secret
-      - path: gitops/base/values.yaml
+      - path: gitops/base/values/values.yaml
   deploy:
   - kapp: {}
  #@ end
