@@ -5,3 +5,8 @@ k3s-local:
   - external-dns
   - cert-manager
   - minio
+tap:
+  profiles:
+    - name: tap-full
+      options:
+        domain: tapdemo.lab.ellin.net
