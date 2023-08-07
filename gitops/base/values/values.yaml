@@ -11,7 +11,7 @@ k3s-local:
    - name: minio
   options:
     minio: install
-    domain: minio.lab.ellin.net
+    domain: miniop.lab.ellin.net
 tap:
   roles:
     - name: tap-full
