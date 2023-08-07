@@ -2,10 +2,10 @@
 #@ load("@ytt:struct", "struct")
 #@ server = data.values.cluster_name
 #@ def some_data():
-#@   if hasattr(data.values,server):
-#@     return data.values[server]
+#@   if hasattr(data.values,server) and hasattr(and data.values[server].profiles)):
+#@     return data.values[server].profiles
 #@   else:
-#@    return data.values["default"]
+#@    return data.values["default"].profiles
 #@   end
 #@ end
 #@ for val in some_data():
@@ -33,6 +33,7 @@ spec:
       valuesFrom:
       - secretRef:
           name: cluster-name-secret
+      - path: gitops/base/values.yaml
   deploy:
   - kapp: {}
  #@ end
