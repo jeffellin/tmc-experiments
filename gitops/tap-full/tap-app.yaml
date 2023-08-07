@@ -30,5 +30,7 @@ spec:
       - config
       valuesFrom:
       - path: values
+      - secretRef:
+          name: tanzu-gitops
   deploy:
   - kapp: {}
