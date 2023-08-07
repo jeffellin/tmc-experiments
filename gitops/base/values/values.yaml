@@ -21,3 +21,5 @@ eks.aws-june23.us-east-2.test:
       values:
         cnrs:
           domain_name: something.lab.ellin.net
+        shared:
+          ingress_domain: something.lab.ellin.net
