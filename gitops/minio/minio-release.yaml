@@ -17,9 +17,6 @@ spec:
         name: bitnami
       interval: 1m
   values:
- #!   extraEnvVars:
- #!     - name: MINIO_SERVER_URL
- #!       value: #@ data.values.domain
     persistence:
       storageClass: nfs-client
       size: 500Gi
