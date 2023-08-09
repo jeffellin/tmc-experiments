@@ -6,5 +6,4 @@ metadata:
     kapp.k14s.io/change-group: "crossplane/aws-provider"
     kapp.k14s.io/change-rule: "upsert after upserting crossplane/config"
 spec:
-spec:
-  package: xpkg.upbound.io/upbound/provider-aws:v0.37.0
+  package: xpkg.upbound.io/upbound/provider-aws-s3:v0.38.0
