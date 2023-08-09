@@ -4,6 +4,11 @@ default:
    - name: cert-manager
   options:
     domain: default
+crossplane:
+  roles:
+   - name: external-dns
+   - name: cert-manager
+   - name: crossplane
 k3s-local:
   roles:
    - name: external-dns
