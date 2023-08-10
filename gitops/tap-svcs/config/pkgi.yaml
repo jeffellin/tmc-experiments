@@ -1,0 +1,51 @@
+
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: tap
+spec:
+  serviceAccountName: default
+  packageRef:
+    refName: services-toolkit.tanzu.vmware.com
+    versionSelection:
+      constraints: 0.11.0
+---
+
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: service-bindings
+spec:
+  serviceAccountName: default
+  packageRef:
+    refName: service-bindings.labs.vmware.com
+    versionSelection:
+      constraints: 0.9.1
+---
+
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: crossplane
+spec:
+  serviceAccountName: default
+  packageRef:
+    refName: crossplane.tanzu.vmware.com
+    versionSelection:
+      constraints: 0.2.1
+
+---
+
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: bitnami-services
+spec:
+  serviceAccountName: default
+  packageRef:
+    refName: bitnami.services.tanzu.vmware.com
+    versionSelection:
+      constraints: 0.2.0
+
+
+
