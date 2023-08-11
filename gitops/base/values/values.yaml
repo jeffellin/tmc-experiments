@@ -2,6 +2,7 @@ default:
   roles:
    - name: external-dns
    - name: cert-manager
+   - name: contour
   options:
     domain: default
 crossplane:
