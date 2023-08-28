@@ -18,6 +18,10 @@ k3s-local:
   options:
     minio: install
     domain: minio.lab.ellin.net
+tap:
+  roles:
+   - name: external-dns
+   - name: tap-full
 eks.aws-june23.us-east-2.test:
   roles:
     - name: external-dns 
