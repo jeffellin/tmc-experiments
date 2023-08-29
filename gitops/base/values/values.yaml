@@ -22,6 +22,13 @@ tap:
   roles:
    - name: external-dns
    - name: tap-full
+  options:
+    tap_install:
+      values:
+        cnrs:
+          domain_name: home.lab.ellin.net
+        shared:
+          ingress_domain: home.lab.ellin.net
 eks.aws-june23.us-east-2.test:
   roles:
     - name: external-dns 
