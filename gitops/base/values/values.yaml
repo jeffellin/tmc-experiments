@@ -21,6 +21,7 @@ k3s-local:
 tap:
   roles:
    - name: external-dns
+   - name: tap-full
   options:
     tap_install:
       values:
