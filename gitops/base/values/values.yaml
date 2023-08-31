@@ -29,7 +29,7 @@ tap:
           domain_name: home.lab.ellin.net
         shared:
           ingress_domain: home.lab.ellin.net
-eks.aws-june23.us-east-2.test:
+tap-run-1:
   roles:
     - name: external-dns 
     - name: tap-full
