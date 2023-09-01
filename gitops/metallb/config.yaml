@@ -6,4 +6,4 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - #@ data.metallb.addresses
+  - #@ data.values.metallb.addresses
