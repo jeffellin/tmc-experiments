@@ -37,7 +37,7 @@ spec:
       - secretRef:
           name: cluster-name-secret
       - secretRef:
-          name: tanzu-gitops
+          name: #@ "tanzu-gitops-" + val.name
   deploy:
   - kapp: {}
  #@ end

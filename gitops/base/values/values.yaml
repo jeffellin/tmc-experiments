@@ -3,8 +3,6 @@ default:
    - name: external-dns
    - name: cert-manager
    - name: contour
-  options:
-    domain: default
 crossplane:
   roles:
    - name: external-dns
@@ -15,33 +13,33 @@ k3s-local:
    - name: external-dns
    - name: cert-manager
    - name: minio
-  options:
-    minio: install
-    domain: minio.lab.ellin.net
+     options:
+       domain: minio.lab.ellin.net
 tap:
   roles:
    - name: external-dns
    - name: tap-full
-  options:
-    tap_install:
-      values:
-        cnrs:
-          domain_name: home.lab.ellin.net
-        shared:
-          ingress_domain: home.lab.ellin.net
+     options:
+       tap_install:
+         values:
+           cnrs:
+             domain_name: home.lab.ellin.net
+           shared:
+             ingress_domain: home.lab.ellin.net
 tap-run-1:
   roles:
     - name: metallb
+      options:
+        metallb:
+          addresses: 192.168.1.14-192.168.1.25
     - name: external-dns 
     - name: cert-manager
     - name: contour
     - name: tap-run
-  options:
-    metallb:
-      addresses: 192.168.1.14-192.168.1.25
-    tap_install:
-      values:
-        cnrs:
-          domain_name: something.lab.ellin.net
-        shared:
-          ingress_domain: something.lab.ellin.net
+      options:
+        tap_install:
+          values:
+            cnrs:
+              domain_name: something.lab.ellin.net
+            shared:
+              ingress_domain: something.lab.ellin.net
