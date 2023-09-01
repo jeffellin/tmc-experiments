@@ -32,6 +32,7 @@ tap:
 tap-run-1:
   roles:
     - name: external-dns 
+    - name: contour
     - name: tap-run
   options:
     tap_install:
