@@ -11,7 +11,7 @@ deployment:
   args:
     - --source=service
     - --source=ingress
-    - --debug
+    - ---log-level=debug
     - --source=contour-httpproxy
     - --policy=upsert-only
     - --registry=txt
