@@ -5,7 +5,7 @@
 envoy:
   service: 
     type: LoadBalancer
-    externalTrafficPolicy: Local
+    externalTrafficPolicy: Cluster
 #@ end
 ---
 apiVersion: v1
