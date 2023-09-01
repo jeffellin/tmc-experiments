@@ -31,7 +31,7 @@ tap-run-1:
     - name: metallb
       options:
         metallb:
-          addresses: 192.168.1.14-192.168.1.25
+          addresses: 192.168.1.151-192.168.1.152
     - name: external-dns 
     - name: cert-manager
     - name: contour
