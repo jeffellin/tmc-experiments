@@ -1,9 +1,5 @@
 default:
   roles:
-   - name: metallb
-     options:
-       metallb:
-         addresses: 192.168.1.153-192.168.1.154
    - name: external-dns
    - name: cert-manager
    - name: contour
