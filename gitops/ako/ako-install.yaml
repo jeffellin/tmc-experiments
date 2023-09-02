@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: ako-install
-  namespace: default
+  namespace: ellin-system
 spec:
   interval: 5m
   chart:
@@ -17,7 +17,7 @@ spec:
       interval: 1m
   valuesFrom:
     - kind: Secret
-      name: avi-values
+      name: avi-secrets
       valuesKey: avi.yaml
   values:
     AKOSettings:
