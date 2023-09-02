@@ -29,10 +29,7 @@ tap:
              ingress_domain: home.lab.ellin.net
 tap-run-1:
   roles:
-    - name: metallb
-      options:
-        metallb:
-          addresses: 192.168.1.151-192.168.1.152
+    - name: ako
     - name: external-dns 
     - name: cert-manager
     - name: contour
