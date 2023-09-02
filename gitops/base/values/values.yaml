@@ -1,5 +1,6 @@
 default:
   roles:
+   - name: ako
    - name: external-dns
    - name: cert-manager
    - name: contour
