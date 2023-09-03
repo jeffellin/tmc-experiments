@@ -17,7 +17,7 @@ spec:
       interval: 1m
   valuesFrom:
     - kind: Secret
-      name: avi-secrets
+      name: avi-secret
       valuesKey: avi.yaml
   values:
     AKOSettings:
