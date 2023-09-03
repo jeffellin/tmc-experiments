@@ -2,7 +2,7 @@ default:
   roles:
    - name: ako
      options:
-       clusterName: default 
+       clusterName: foo 
    - name: external-dns
    - name: cert-manager
    - name: contour
