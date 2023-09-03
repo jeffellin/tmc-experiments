@@ -31,6 +31,6 @@ spec:
       valuesFrom:
       - path: values
       - secretRef:
-          name: tanzu-gitops-tap-run
+          name: tanzu-gitops-tap-view
   deploy:
   - kapp: {}
