@@ -19,7 +19,7 @@ spec:
       ref: origin/main
       secretRef:
         name: sync-git-ssh
-      subPath: clusters/tap-run/cluster-config
+      subPath: clusters/view/cluster-config
   template:
   - sops:
       age:
@@ -31,6 +31,6 @@ spec:
       valuesFrom:
       - path: values
       - secretRef:
-          name: tanzu-gitops-tap-run
+          name: tanzu-gitops-tap-view
   deploy:
   - kapp: {}
