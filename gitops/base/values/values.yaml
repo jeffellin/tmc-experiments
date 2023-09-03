@@ -53,7 +53,7 @@ tap-view:
     - name: external-dns 
     - name: cert-manager
     - name: contour
-    - name: tap-run
+    - name: tap-view
       options:
         tap_install:
           values:
