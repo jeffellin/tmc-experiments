@@ -32,6 +32,8 @@ tap:
 tap-run-1:
   roles:
     - name: ako
+      options:
+        clusterName: tap-run 
     - name: external-dns 
     - name: cert-manager
     - name: contour
