@@ -51,7 +51,6 @@ tap-view:
       options:
         clusterName: tap-view 
     - name: external-dns 
-    - name: cert-manager
     - name: contour
     - name: tap-view
       options:
