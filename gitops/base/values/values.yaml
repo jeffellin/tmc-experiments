@@ -45,3 +45,19 @@ tap-run-1:
               domain_name: something.lab.ellin.net
             shared:
               ingress_domain: something.lab.ellin.net
+view:
+  roles:
+    - name: ako
+      options:
+        clusterName: tap-view 
+    - name: external-dns 
+    - name: cert-manager
+    - name: contour
+    - name: tap-run
+      options:
+        tap_install:
+          values:
+            cnrs:
+              domain_name: view.lab.ellin.net
+            shared:
+              ingress_domain: view.lab.ellin.net
