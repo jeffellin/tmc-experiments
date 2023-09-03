@@ -45,7 +45,7 @@ tap-run-1:
               domain_name: something.lab.ellin.net
             shared:
               ingress_domain: something.lab.ellin.net
-view:
+tap-view:
   roles:
     - name: ako
       options:
