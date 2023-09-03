@@ -20,6 +20,8 @@ spec:
       name: avi-config-secret
       valuesKey: avi.yaml
   values:
+    L7Settings:
+      serviceType: NodePort
     AKOSettings:
       clusterName: #@ data.values.clusterName
     NetworkSettings:
