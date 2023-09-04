@@ -35,7 +35,6 @@ tap-run-1:
       options:
         clusterName: tap-run 
     - name: external-dns 
-    - name: cert-manager
     - name: contour
     - name: tap-run
       options:
