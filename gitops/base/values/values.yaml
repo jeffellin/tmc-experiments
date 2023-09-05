@@ -29,6 +29,21 @@ tap:
              domain_name: home.lab.ellin.net
            shared:
              ingress_domain: home.lab.ellin.net
+tap-build:
+  roles:
+    - name: ako
+      options:
+        clusterName: tap-build 
+    - name: external-dns 
+    - name: contour
+    - name: tap-build
+      options:
+        tap_install:
+          values:
+            cnrs:
+              domain_name: build.lab.ellin.net
+            shared:
+              ingress_domain: build.lab.ellin.net             
 tap-run-1:
   roles:
     - name: ako
