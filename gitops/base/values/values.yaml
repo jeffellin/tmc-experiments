@@ -47,14 +47,6 @@ tap-build:
 eks.aws-june23.us-east-2.test:
   roles:
     - name: external-dns 
-    - name: tap-full
-      options:
-        tap_install:
-          values:
-            cnrs:
-              domain_name: aws.cloud.ellin.net
-            shared:
-              ingress_domain: aws.cloud.ellin.net
           
 tap-run-1:
   roles:
