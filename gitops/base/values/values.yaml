@@ -33,7 +33,7 @@ tap-build:
         clusterName: tap-build 
     - name: external-dns 
     - name: contour
-    - name: tap-build
+    - name: tap-full
       options:
         tap_install:
           values:
