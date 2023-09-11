@@ -30,7 +30,6 @@ tap-test:
 azure-tap:
   roles:
     - name: external-dns 
-    - name: contour
     - name: tap-full
       options:
         tap_install:
