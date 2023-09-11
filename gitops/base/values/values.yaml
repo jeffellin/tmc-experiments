@@ -30,14 +30,6 @@ eks.aws-june23.us-east-2.tap-full:
   roles:
     - name: external-dns 
     - name: contour
-    - name: tap-full
-      options:
-        tap_install:
-          values:
-            cnrs:
-              domain_name: full.lab.ellin.net
-            shared:
-              ingress_domain: full.lab.ellin.net   
 tap-test:
   roles:
     - name: external-dns
