@@ -1,7 +1,7 @@
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
-  name: tanzu-gitops
+  name: tanzu-gitops-tap-full
   namespace: ellin-system
   annotations:
     kapp.k14s.io/change-group: install-registry-export
@@ -52,7 +52,7 @@ spec:
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
 metadata:
-  name: tanzu-gitops
+  name: tanzu-gitops-tap-full
   namespace: tanzu-sync
 spec:
   fromNamespace: ellin-system
