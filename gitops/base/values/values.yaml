@@ -15,7 +15,7 @@ k3s-local:
    - name: minio
      options:
        domain: minio.lab.ellin.net
-tap:
+tap-test:
   roles:
    - name: external-dns
    - name: tap-full
@@ -30,12 +30,6 @@ eks.aws-june23.us-east-2.tap-full:
   roles:
     - name: external-dns 
     - name: contour
-tap-test:
-  roles:
-    - name: external-dns
-    - name: cert-manager
-    - name: contour
-    - name: tap-build
 tap-run-1:
   roles:
     - name: ako
