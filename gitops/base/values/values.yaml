@@ -26,11 +26,8 @@ tap:
              domain_name: home.lab.ellin.net
            shared:
              ingress_domain: home.lab.ellin.net
-tap-build:
+eks.aws-june23.us-east-2.test:
   roles:
-    - name: ako
-      options:
-        clusterName: tap-build 
     - name: external-dns 
     - name: contour
     - name: tap-full
@@ -38,12 +35,13 @@ tap-build:
         tap_install:
           values:
             cnrs:
-              domain_name: build.lab.ellin.net
+              domain_name: full.lab.ellin.net
             shared:
-              ingress_domain: build.lab.ellin.net   
+              ingress_domain: full.lab.ellin.net   
 eks.aws-june23.us-east-2.test:
   roles:
     - name: external-dns 
+    - 
 tap-test:
   roles:
     - name: external-dns
