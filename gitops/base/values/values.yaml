@@ -38,7 +38,7 @@ eks.aws-june23.us-east-2.test:
               domain_name: full.lab.ellin.net
             shared:
               ingress_domain: full.lab.ellin.net   
-eks.aws-june23.us-east-2.test:
+eks.aws-june23.us-east-2.full-cluster:
   roles:
     - name: external-dns 
     - 
