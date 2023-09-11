@@ -26,6 +26,19 @@ tap-test:
              domain_name: home.lab.ellin.net
            shared:
              ingress_domain: home.lab.ellin.net
+
+azure-tap:
+  roles:
+    - name: external-dns 
+    - name: contour
+    - name: tap-full
+      options:
+        tap_install:
+          values:
+            cnrs:
+              domain_name: tap-azure.lab.ellin.net
+            shared:
+              ingress_domain: tap-azure.lab.ellin.net
 eks.aws-june23.us-east-2.tap-full-cluster:
   roles:
     - name: external-dns 
