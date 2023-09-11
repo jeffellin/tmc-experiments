@@ -26,7 +26,7 @@ tap:
              domain_name: home.lab.ellin.net
            shared:
              ingress_domain: home.lab.ellin.net
-eks.aws-june23.us-east-2.full-cluster:
+eks.aws-june23.us-east-2.tap-full:
   roles:
     - name: external-dns 
     - name: contour
