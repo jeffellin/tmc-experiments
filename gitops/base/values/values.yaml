@@ -15,6 +15,9 @@ k3s-local:
    - name: minio
      options:
        domain: minio.lab.ellin.net
+tap-build2:
+  roles:
+   - name: external-dns
 tap-test:
   roles:
    - name: external-dns
