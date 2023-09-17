@@ -2,3 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: tanzu-sync
+  annotations:
+    tanzu-sync.tanzu.vmware.com/variant: sops
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
+---

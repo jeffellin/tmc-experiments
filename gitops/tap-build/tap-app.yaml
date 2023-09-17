@@ -10,7 +10,7 @@ metadata:
     kapp.k14s.io/change-rule.2: delete before deleting tanzu-sync-secrets
     kapp.k14s.io/change-rule.3: delete before deleting install-registry-export
     tanzu-sync.tanzu.vmware.com/variant: sops
-    tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
 spec:
   serviceAccountName: sync-sa
   fetch:
@@ -24,13 +24,11 @@ spec:
   - sops:
       age:
         privateKeysSecretRef:
-          name: age-key
+          name: sync-age-identity
   - ytt:
       paths:
       - config
       valuesFrom:
       - path: values
-      - secretRef:
-          name: tanzu-gitops-tap-build
   deploy:
   - kapp: {}

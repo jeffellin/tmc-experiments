@@ -5,9 +5,7 @@ metadata:
   namespace: tanzu-sync
   annotations:
     tanzu-sync.tanzu.vmware.com/variant: sops
-    tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
-imagePullSecrets:
-  - name: install-registry-dockerconfig
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -15,7 +13,7 @@ metadata:
   name: tanzu-sync-cluster-admin
   annotations:
     tanzu-sync.tanzu.vmware.com/variant: sops
-    tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
 rules:
 - apiGroups:
   - '*'
@@ -30,7 +28,7 @@ metadata:
   name: tanzu-sync-cluster-admin
   annotations:
     tanzu-sync.tanzu.vmware.com/variant: sops
-    tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -39,3 +37,4 @@ subjects:
 - kind: ServiceAccount
   name: sync-sa
   namespace: tanzu-sync
+---
