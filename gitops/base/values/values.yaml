@@ -18,11 +18,9 @@ k3s-local:
 tap-build:
   roles:
    - name: external-dns
-   - name: tap-build
 tap-build2:
   roles:
    - name: external-dns
-   - name: tap-build
 tap-test:
   roles:
    - name: external-dns
