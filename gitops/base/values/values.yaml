@@ -65,7 +65,7 @@ tap-iterate:
         clusterName: tap-iterate 
     - name: external-dns 
     - name: contour
-    - name: tap-full
+    - name: tap-iterate
       options:
         tap_install:
           values:
