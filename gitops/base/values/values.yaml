@@ -57,6 +57,15 @@ eks.aws-june23.us-east-2.tap-full-cluster:
               domain_name: tap-full.lab.ellin.net
             shared:
               ingress_domain: tap-full.lab.ellin.net
+
+tap-iterate:
+  roles:
+    - name: ako
+      options:
+        clusterName: tap-iterate 
+    - name: external-dns 
+    - name: contour
+
 tap-run-1:
   roles:
     - name: ako
