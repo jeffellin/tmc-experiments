@@ -29,4 +29,5 @@ spec:
         - networkName: DFrontEnd
           cidr: 192.168.4.0/24
     ControllerSettings:
+      serviceEngineGroupName: #@ data.values.clusterName
       controllerHost: 192.168.1.190
