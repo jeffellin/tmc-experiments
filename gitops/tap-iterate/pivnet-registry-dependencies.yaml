@@ -1,0 +1,14 @@
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretExport
+metadata:
+  name: install-registry-dockerconfig
+  namespace: tanzu-sync
+  annotations:
+    kapp.k14s.io/change-group: install-registry-export
+    tanzu-sync.tanzu.vmware.com/variant: sops
+    tanzu-sync.tanzu.vmware.com/version: 0.1.0+2023-04-06-214153_(8eaba70)
+spec:
+  toNamespaces:
+  - '*'
+---
