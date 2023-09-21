@@ -59,7 +59,7 @@ eks.aws-june23.us-east-2.tap-full-cluster:
               ingress_domain: tap-full.lab.ellin.net
 
 
-aks.be7fd3a2.azuresa.tap-iterate:
+aks.be7fd3a2.azuresa.tap-iterate-aks:
   roles:
     - name: external-dns 
     - name: contour
