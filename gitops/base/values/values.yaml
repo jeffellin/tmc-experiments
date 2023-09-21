@@ -19,32 +19,6 @@ tap-build:
   roles:
    - name: external-dns
    - name: tap-build
-tap-build2:
-  roles:
-   - name: external-dns
-tap-test:
-  roles:
-   - name: external-dns
-   - name: tap-full
-     options:
-       tap_install:
-         values:
-           cnrs:
-             domain_name: home.lab.ellin.net
-           shared:
-             ingress_domain: home.lab.ellin.net
-
-azure-tap:
-  roles:
-    - name: external-dns 
-    - name: tap-full
-      options:
-        tap_install:
-          values:
-            cnrs:
-              domain_name: tap-azure.lab.ellin.net
-            shared:
-              ingress_domain: tap-azure.lab.ellin.net
 eks.aws-june23.us-east-2.tap-full-cluster:
   roles:
     - name: external-dns 
@@ -57,8 +31,6 @@ eks.aws-june23.us-east-2.tap-full-cluster:
               domain_name: tap-full.lab.ellin.net
             shared:
               ingress_domain: tap-full.lab.ellin.net
-
-
 aks.be7fd3a2.azuresa.tap-iterate-aks:
   roles:
     - name: external-dns 
@@ -87,6 +59,19 @@ tap-iterate:
             shared:
               ingress_domain: tap-iterate.lab.ellin.net
 
+
+tap-run-tkgs:
+  roles:
+    - name: external-dns 
+    - name: contour
+    - name: tap-run
+      options:
+        tap_install:
+          values:
+            cnrs:
+              domain_name: run.lab.ellin.net
+            shared:
+              ingress_domain: run.lab.ellin.net
 tap-run-1:
   roles:
     - name: ako
