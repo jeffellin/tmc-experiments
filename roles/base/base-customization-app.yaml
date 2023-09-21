@@ -4,6 +4,8 @@ metadata:
   name: tmc-base-customization-app
   namespace: ellin-system
 spec:
+  dependsOn:
+  - name: age-key
   serviceAccountName: default
   fetch:
   - git:
