@@ -32,5 +32,7 @@ spec:
       - path: values
       - secretRef:
           name: tanzu-gitops-tap-view
+      - secretRef:
+          name: tap-remote-view-secrets
   deploy:
   - kapp: {}
