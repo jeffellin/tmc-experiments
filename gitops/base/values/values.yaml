@@ -43,6 +43,7 @@ aks.be7fd3a2.azuresa.tap-iterate-aks:
               domain_name: tap-iterate.azure.lab.ellin.net
             shared:
               ingress_domain: tap-iterate.azure.lab.ellin.net
+    - name: letsencrypt-issuer
 tap-iterate:
   roles:
     - name: ako
@@ -58,7 +59,7 @@ tap-iterate:
               domain_name: tap-iterate.lab.ellin.net
             shared:
               ingress_domain: tap-iterate.lab.ellin.net
-
+    - name: letsencrypt-issuer
 tap-run-1:
   roles:
     - name: ako
@@ -74,6 +75,7 @@ tap-run-1:
               domain_name: something.lab.ellin.net
             shared:
               ingress_domain: something.lab.ellin.net
+    - name: letsencrypt-issuer
 tap-view:
   roles:
     - name: ako
