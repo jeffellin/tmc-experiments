@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: tap-remote-view-secrets
+    namespace: tap-install
+type: Opaque
+stringData:
+    content.yaml: |
+      tap_install:
+        values:
+          tap_gui:
+            app_config:
+                kubernetes:
+                    serviceLocatorMethods:
+                        type: 'multiTenant'
+                    clusterLocatorMethods:
+                        - type: 'config'
+                          clusters:
+                          - url: https://192.168.1.22:6443
+                            name: tap-build
+                            authProvider: serviceAccount
+                            serviceAccountToken: eyJhbGciOiJSUzI1NiIsImtpZCI6Im4xTnZoQVB3SkwxamoyZjVyUGNZOUhVSnprQzk3bmUyWi0tSVItM1JKN00ifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJ0YXAtZ3VpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiZDZjYzY1YmQtZDU4YS00OGQ3LTgwMzQtM2MxNjI4OWEyNzQ3Iiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnRhcC1ndWk6dGFwLWd1aS12aWV3ZXIifQ.Hf4BT9q8spXpTM1wpfRIiNFmDkZOXxV_XkpLEh8OgwQ_VhKoqXNuTsUjomWMYKgyMZitArzRkDbwQ1Xs9Rs15PteEzdpQ2fXm4aH3biJsFo5AY9Zj5K395VfG80DtJui2xi7JNwlgfpD26xHezYI417B9Ew88E08iMJ_3Yj_swLrwIddeLoKfNCzH-wMv7OiTjVyf3Bw2aIFB4kWLM_Rdek8zVYw96IGgHBuwJueMb6XJekNQjInpjjZP1tQGBmkycrlmRzy32iZgqmxEgVu4KjJrXcL-YfYlP7nDQhpn9zH6QvY73ayBLGpi-1f3bQHPyuSjx0F0fnOaV0HmAqMHA
+                            skipTLSVerify: true
+                            skipMetricsLookup: true
+                          - url: https://192.168.1.90:6443
+                            name: tap-run
+                            authProvider: serviceAccount
+                            serviceAccountToken: eyJhbGciOiJSUzI1NiIsImtpZCI6IlFOX19KM0VuV2JiWTlYbjk5OHNVeXVmTVlWaklIWjA2S3VNTVg1NF94eHMifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJ0YXAtZ3VpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNDcxYmFjZTAtNDhkNy00OWQwLTk2NmYtZTIyZjNmN2IxODQxIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnRhcC1ndWk6dGFwLWd1aS12aWV3ZXIifQ.YhfYItPaabVrcch4VDBct7VvTpv-l4olllPnz4mfkqjsHVGxSw7c5SbPx-7-YXhi6MJufG2sHnG_xCGkI2HZJe9oZsm7eSGc88B-g3bJ5D3u6iyv0KZAXbJf_JFoBLbi2M0m9Ln-HBAVB1DcDgbr1O2q4UAYOEQWkwZKV3ALnLd_Us3oL0RM7gl99Girz_K9Cfe_TBBNnHvtWC7OqT9F9Qj_82FfcmzTmn4cwBaMyNtpNzVZJ0YEISxjExNFHByIRzbMApC4u_u4NK80XMMtiBKNNIxQ40ENfIuOgElzeaMPj3UO6PdSd8j2in_SUtFWrpxQebYqG0psHy30NKFI7Q
+                            skipTLSVerify: true
+                            skipMetricsLookup: true
+                auth:
+                    allowGuestAccess: true
