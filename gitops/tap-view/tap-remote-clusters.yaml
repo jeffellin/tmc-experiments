@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: tap-remote-view-secrets
-    namespace: tap-install
+    namespace: tanzu-sync
 type: Opaque
 stringData:
     content.yaml: |
