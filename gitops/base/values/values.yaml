@@ -59,19 +59,6 @@ tap-iterate:
             shared:
               ingress_domain: tap-iterate.lab.ellin.net
 
-
-tap-run-tkgs:
-  roles:
-    - name: external-dns 
-    - name: contour
-    - name: tap-run
-      options:
-        tap_install:
-          values:
-            cnrs:
-              domain_name: run.lab.ellin.net
-            shared:
-              ingress_domain: run.lab.ellin.net
 tap-run-1:
   roles:
     - name: ako
@@ -102,3 +89,4 @@ tap-view:
               domain_name: view.lab.ellin.net
             shared:
               ingress_domain: view.lab.ellin.net
+    - name: letsencrypt-issuer
