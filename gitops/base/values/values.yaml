@@ -62,6 +62,7 @@ tap-iterate:
     - name: letsencrypt-issuer
 aks.be7fd3a2.azuresa.tap-run-1:
   roles:
+    - name: external-dns
     - name: contour
     - name: tap-run
       options:
