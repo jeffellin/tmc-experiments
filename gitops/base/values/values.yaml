@@ -92,6 +92,19 @@ aks.be7fd3a2.azuresa.tap-view:
         tap_install:
           values:
             cnrs:
+              domain_name: view.azure.lab.ellin.net
+            shared:
+              ingress_domain: view.azure.lab.ellin.net
+    - name: letsencrypt-issuer
+tap-view:
+  roles:
+    - name: external-dns 
+    - name: contour
+    - name: tap-view
+      options:
+        tap_install:
+          values:
+            cnrs:
               domain_name: view.lab.ellin.net
             shared:
               ingress_domain: view.lab.ellin.net
