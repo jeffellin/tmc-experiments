@@ -46,9 +46,6 @@ aks.be7fd3a2.azuresa.tap-iterate-aks:
     - name: letsencrypt-issuer
 tap-iterate:
   roles:
-    - name: ako
-      options:
-        clusterName: tap-iterate 
     - name: external-dns 
     - name: contour
     - name: tap-iterate
@@ -62,9 +59,6 @@ tap-iterate:
     - name: letsencrypt-issuer
 tap-run-1:
   roles:
-    - name: ako
-      options:
-        clusterName: tap-run 
     - name: external-dns
     - name: contour
     - name: tap-run
