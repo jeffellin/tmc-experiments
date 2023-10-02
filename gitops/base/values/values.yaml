@@ -57,7 +57,7 @@ tap-iterate:
             shared:
               ingress_domain: tap-iterate.lab.ellin.net
     - name: letsencrypt-issuer
-tap-run-1:
+tap-run:
   roles:
     - name: external-dns
     - name: contour
