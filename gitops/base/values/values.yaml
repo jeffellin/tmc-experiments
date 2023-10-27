@@ -3,7 +3,7 @@ default:
    - name: external-dns
    - name: cert-manager
    - name: contour
-crossplane:
+aks.be7fd3a2.azuresa.crossplane:
   roles:
    - name: external-dns
    - name: cert-manager
