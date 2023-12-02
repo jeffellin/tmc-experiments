@@ -19,7 +19,7 @@ tap-build:
   roles:
    - name: external-dns
    - name: tap-build
-eks.aws-june23.us-east-2.tap-full-cluster:
+tap:
   roles:
     - name: external-dns 
     - name: contour
