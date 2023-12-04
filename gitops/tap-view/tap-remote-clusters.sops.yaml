@@ -5,24 +5,22 @@ metadata:
     namespace: tanzu-sync
 type: Opaque
 stringData:
-    content.yaml: ENC[AES256_GCM,data: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,iv:NMNwXsdyhFREoFcs2FnqmlbHuYAiPmJvqgD8QzWnkWI=,tag:lr363jqLrn/bdYV+9KYtfA==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age1sul2yf3vwkkzqzq58v6cpsn9e6sn2sl09p5qqgqfr9fq70tez9nqukh9sa
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRbVlUYmRKd3lhcGpMZlZQ
-            TjE3TWpjK1FEYnJ2NzhSdDdMUVVCc0VFaWlvCkZtMG1WOGFjQzA0eTJERTlLd0sr
-            ZmFGSndCNk1HZldISTdUR1Z5WUUzWHMKLS0tIGJuMjFFbm1zSkgyQjBtQndudUlq
-            UHdoMCtSdnFlbUZzdnlqNnk5QzFSQzgKHp2O9te2CFgx5Zkm1JQv/1iUJzrspNlK
-            GFNZOvRckVYQdhCnOeuxmUMG0oHTxv5jiD05dIR314/+C/6haCL6tA==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-04T22:18:13Z"
-    mac: ENC[AES256_GCM,data:oNwqauA5hsLnMxwTsn7+qTetKET/ePNhombmxCp9Z0i7H9EzAytwOJP972Mbwuo3lIOOCedngtLD5F2u1YUIeoKbZT3W6u3GbaXcKv1WFuwP6UOkWwmAn0qBTOfuoFRHOxL6muLLFqsKyN9exX06b54gv5gTLBK/VavvCSkvrM0=,iv:x2nipWTo1k7lzXJUNWtNx0QV7pidu3ucva1L4OMwTbg=,tag:k5sfxkbj4aG8NZ7rsupTTA==,type:str]
-    pgp: []
-    encrypted_regex: ^(stringData)$
-    version: 3.8.0
+    content.yaml: |-
+        tap_install:
+          values:
+            tap_gui:
+              app_config:
+                  kubernetes:
+                      serviceLocatorMethods:
+                          type: 'multiTenant'
+                      clusterLocatorMethods:
+                          - type: 'config'
+                            clusters:
+                            - url: https://192.168.4.16:6443
+                              name: tap-iterate
+                              authProvider: serviceAccount
+                              serviceAccountToken: eyJhbGciOiJSUzI1NiIsImtpZCI6InYxRGlaMnRqMDg4UWhfRHdGZHV0WmJOZU5xNThPekZWS0h0UExfWUU2Tk0ifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJ0YXAtZ3VpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6InRhcC1ndWktdmlld2VyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMDI3Nzg2YjUtNTdjMi00NzM0LTljNGItOTk3NjM5MzlkZmNjIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OnRhcC1ndWk6dGFwLWd1aS12aWV3ZXIifQ.U-0R2kZp8fOvnkJn3zSMQB8253RcDPrvbAOUHMkgKjCBNJNac6Mc0TtJ8rnHSYyGA5kzKqwNCwjoRZcbqrwjscng4Bd-qiTRHS5P4gxIHUo3rEoXZy0Qd6Lm8xYpf5XkTKImGfu6O_P1f3Dbv8oG5v2AW81EdoLfyxPvkvp1SKq_6bJxJfcwBFXNJhGLpkqtVPFHo-qJ6fqwlEQ7ln6s87OoZ-xYSh16yGAmzcfrKdvtfILJT0SSLXJKzFsECdPqIst4Gv5UvLlrmzhmizIZ-WxRdz8wBv2VyublZgRyqeNHt5POgXDJ9yicdbd3DUddwISud2lbsdd_QQG98G7pVw
+                              skipTLSVerify: true
+                              skipMetricsLookup: true
+                  auth:
+                      allowGuestAccess: true
