@@ -15,9 +15,7 @@ spec:
       - dns01:
           route53:
             region: us-east-2
-            accessKeyIDSecretRef:
-              name: route53-credentials
-              key: aws_access_key_id   
+            accessKeyID: AKIA56DNJMJL4B6CNU5H
             secretAccessKeySecretRef:
               name: route53-credentials
               key: aws_secret_access_key
