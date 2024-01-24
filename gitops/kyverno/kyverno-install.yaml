@@ -1,0 +1,29 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: kyverno
+  namespace: tanzu-helm-resources
+spec:
+  interval: 5m0s
+  url: https://kyverno.github.io/kyverno/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kyverno-release
+  namespace: tanzu-helm-resources
+  annotations:
+    kapp.k14s.io/change-group: "crossplane/helm-install"
+    kapp.k14s.io/change-rule: "upsert after upserting crossplane/helm-repo"
+spec:
+  chart:
+    spec:
+      chart: kyverno
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: kyverno
+      version: 3.1.4
+  install:
+    createNamespace: true
+  interval: 10m0s
