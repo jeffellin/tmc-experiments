@@ -4,6 +4,11 @@ default:
    - name: cert-manager
    - name: contour
    - name: letsencrypt-issuer
+baseline:
+  roles:
+   - name: external-dns
+   - name: cert-manager
+   - name: letsencrypt-issuer
 services:
   roles:
    - name: external-dns
