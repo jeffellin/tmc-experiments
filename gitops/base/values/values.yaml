@@ -9,6 +9,9 @@ baseline:
    - name: external-dns
    - name: cert-manager
    - name: letsencrypt-issuer
+   - name: metallb
+     options:
+       addresses: 192.168.4.100-192.168.4.115
 services:
   roles:
    - name: external-dns
