@@ -9,6 +9,7 @@ baseline:
    - name: external-dns
    - name: cert-manager
    - name: letsencrypt-issuer
+   - name: countour
    - name: metallb
      options:
        metallb:
