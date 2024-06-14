@@ -13,7 +13,7 @@ baseline:
    - name: metallb
      options:
        metallb:
-         addresses: 192.168.4.100-192.168.4.115
+         addresses: 192.168.4.110-192.168.4.115
 services:
   roles:
    - name: external-dns
