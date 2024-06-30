@@ -3,13 +3,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: input-resource-reader
-  namespace: vmware-system-tmc
+  namespace: continuousdelivery-resources
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: input-resource-reader
-  namespace: vmware-system-tmc
+  namespace: continuousdelivery-resources
 rules:
 - apiGroups:
   - ""
@@ -24,7 +24,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: input-resource-reader
-  namespace: vmware-system-tmc
+  namespace: continuousdelivery-resources
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -38,7 +38,7 @@ apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretTemplate
 metadata:
   name: cluster-name-secret
-  namespace: vmware-system-tmc
+  namespace: continuousdelivery-resources
 spec:
   serviceAccountName: input-resource-reader # used to fetch input resources
   inputResources:
@@ -58,7 +58,7 @@ apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
   name: cluster-name-secret
-  namespace: vmware-system-tmc
+  namespace: continuousdelivery-resources
 spec:
   toNamespace: '*'
 ---
@@ -68,4 +68,4 @@ metadata:
   name: cluster-name-secret
   namespace: ellin-system
 spec:
-  fromNamespace: vmware-system-tmc
+  fromNamespace: continuousdelivery-resources
