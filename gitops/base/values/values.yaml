@@ -28,21 +28,17 @@ services:
   roles:
    - name: external-dns
    - name: cert-manager
-   - name: contour
    - name: letsencrypt-issuer
+   - name: contour
+   - name: metallb
+     options:
+       metallb:
+         addresses: 192.168.4.90-192.168.4.105
    - name: minio
      options:
        domain: minio.lab.ellin.net
-aks.be7fd3a2.azuresa.crossplane:
-  roles:
-   - name: external-dns
-   - name: cert-manager
-   - name: crossplane
-k3s-local:
-  roles:
-   - name: external-dns
-   - name: cert-manager
 
+#---- old tap stuff won't work
 tap-build:
   roles:
    - name: external-dns
