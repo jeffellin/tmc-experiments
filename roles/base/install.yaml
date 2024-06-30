@@ -66,6 +66,6 @@ apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
 metadata:
   name: cluster-name-secret
-  namespace: ellin-system
+  namespace: continuousdelivery-resources
 spec:
   fromNamespace: continuousdelivery-resources

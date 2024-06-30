@@ -2,7 +2,7 @@ apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
   name: tanzu-gitops-tap-full
-  namespace: ellin-system
+  namespace: continuousdelivery-resources
   annotations:
     kapp.k14s.io/change-group: install-registry-export
     tanzu-sync.tanzu.vmware.com/variant: sops
@@ -28,7 +28,7 @@ apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
 metadata:
   name: age-key
-  namespace: ellin-system
+  namespace: continuousdelivery-resources
   annotations:
     kapp.k14s.io/change-group: install-registry-export
     tanzu-sync.tanzu.vmware.com/variant: sops
@@ -47,7 +47,7 @@ metadata:
     tanzu-sync.tanzu.vmware.com/variant: sops
     tanzu-sync.tanzu.vmware.com/version: 1.6.0-rc.2
 spec:
-  fromNamespace: ellin-system
+  fromNamespace: continuousdelivery-resources
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretImport
@@ -55,5 +55,5 @@ metadata:
   name: tanzu-gitops-tap-full
   namespace: tanzu-sync
 spec:
-  fromNamespace: ellin-system
+  fromNamespace: continuousdelivery-resources
 ---

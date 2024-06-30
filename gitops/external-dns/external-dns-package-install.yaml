@@ -2,7 +2,7 @@ apiVersion: packaging.carvel.dev/v1alpha1
 kind: PackageInstall
 metadata:
   name: externaldns
-  namespace: ellin-system
+  namespace: continuousdelivery-resources
   annotations:
     kapp.k14s.io/change-group: "externaldns"
 spec:
