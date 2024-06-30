@@ -12,7 +12,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: contour-values
-  namespace: ellin-system
+  namespace: continuousdelivery-resources
   annotations:
     kapp.k14s.io/change-rule: "delete after deleting contour"
 type: Opaque

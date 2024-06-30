@@ -2,7 +2,7 @@ apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
   name: tmc-base-customization-app
-  namespace: ellin-system
+  namespace: continuousdelivery-resources 
 spec:
   serviceAccountName: default
   fetch:
