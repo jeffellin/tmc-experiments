@@ -4,6 +4,16 @@ default:
    - name: cert-manager
    - name: contour
    - name: letsencrypt-issuer
+sandbox:
+  roles:
+   - name: external-dns
+   - name: cert-manager
+   - name: letsencrypt-issuer
+   - name: contour
+   - name: metallb
+     options:
+       metallb:
+         addresses: 192.168.4.130-192.168.4.145
 baseline:
   roles:
    - name: external-dns
