@@ -1,32 +1,27 @@
 #@ load("@ytt:data", "data")
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: minio
+  name: minio-bitnami
   namespace: flux-system
 spec:
+  type: oci
   interval: 5m0s
-  provider: generic
-  url: https://charts.min.io/
+  url: oci://registry-1.docker.io/bitnamicharts/minio
+
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: minio-release
+  name: minio-bitnami
   namespace: flux-system
 spec:
   interval: 5m
-  chart:
-    spec:
-      chart: minio
-      reconcileStrategy: ChartVersion
-      version: '*'
-      sourceRef:
-        kind: HelmRepository
-        name: minio
-        namespace: flux-system
-      interval: 1m
+  chartRef:
+    kind: OCIRepository
+    name: minio-bitnami
+    namespace: flux-system
   values:
     persistence:
       storageClass: nfs-client
