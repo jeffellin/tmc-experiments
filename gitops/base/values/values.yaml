@@ -19,6 +19,7 @@ services:
   roles:
    - name: external-dns
    - name: cert-manager
+   - name: proxmox-csi
    - name: letsencrypt-issuer
    - name: contour
    - name: nfs-provisioner

@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: testing-stuff2
+  namespace: continuousdelivery-resources
+  annotations:
+    kapp.k14s.io/update-strategy: always-replace
+spec:
+  template:
+    metadata:
+      name: testing-stuff2
+    spec:
+      containers:
+      - name: tester
+        image: bitnami/kubectl
+        env:
+        # Define the environment variable
+        - name: PVM_ZONE
+          valueFrom:
+            configMapKeyRef:
+              # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
+              name: stack-config
+              # Specify the key associated with the value
+              key: cluster_zone
+        command:
+        - "/bin/sh"
+        - "-c"
+        - |
+          for node in $(kubectl get nodes -o name);
+            do
+              kubectl get node ${node##*/} -o yaml
+              kubectl label ${node} topology.kubernetes.io/zone=${PVM_ZONE}
+              kubectl label ${node} topology.kubernetes.io/region=${PVM_ZONE}
+              kubectl get node ${node##*/} -o yaml
+            done
+          echo ${PVM_ZONE}
+      restartPolicy: Never

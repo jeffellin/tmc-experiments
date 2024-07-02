@@ -1,0 +1,44 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: proxmox-csi-oci
+  namespace: csi-proxmox
+spec:
+  interval: 5m0s
+  url: oci://ghcr.io/sergelogvinov/charts/proxmox-csi-plugin
+  ref:
+    tag: 0.2.5
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: proxmox-csi-release
+  namespace: csi-proxmox
+spec:
+  interval: 10m
+  chartRef:
+    kind: OCIRepository
+    name: proxmox-csi-oci
+    namespace: csi-proxmox
+  valuesFrom:
+    - kind: Secret
+      name: proxmox-csi-plugin 
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: proxmox-rbd
+allowVolumeExpansion: true
+parameters:
+  # I misunderstood this to be the backing volume filesystem, not the wanted filesystem.
+  csi.storage.k8s.io/fstype: ext4
+  # Changed this match an existing store ID. I misunderstood this to be the type of storage used,
+  # not the ID of a storage device
+  storage: SSD_2TB
+  cache: writethrough
+  ssd: "true"
+mountOptions:
+  - noatime
+provisioner: csi.proxmox.sinextra.dev
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
