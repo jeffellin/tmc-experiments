@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: harbor
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: harbor
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: harbor
+      version: '*'
+  interval: 10m
+  releaseName: harbor
+  values:
+    expose:
+      ingress:
+        annotations:
+          cert-manager.io/cluster-issuer: letsencrypt-contour-cluster-issuer
+        hosts:
+          core: registry.lab.ellin.net
+      tls:
+        enabled: true
+      type: ingress
+    externalURL: https://registry.lab.ellin.net
