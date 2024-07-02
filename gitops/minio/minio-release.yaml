@@ -14,14 +14,14 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: minio-release
-  namespace: default
+  namespace: flux-system
 spec:
   interval: 5m
   chart:
     spec:
       chart: minio
       reconcileStrategy: ChartVersion
-      version: 12.6.12
+      version: '*'
       sourceRef:
         kind: HelmRepository
         name: minio
