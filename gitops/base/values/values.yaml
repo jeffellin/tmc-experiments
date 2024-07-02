@@ -24,7 +24,7 @@ services:
    - name: metallb
      options:
        metallb:
-         addresses: 192.168.4.90-192.168.4.105
+         addresses: 192.168.4.155-192.168.4.165
    - name: minio
      options:
        domain: minio.lab.ellin.net
