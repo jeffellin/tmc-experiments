@@ -29,8 +29,7 @@ spec:
       size: 500Gi
     ingress:
       enabled: true
-      hosts:
-       - #@ data.values.domain
+      hostname: #@ data.values.domain
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-contour-cluster-issuer
     tls:
