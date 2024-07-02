@@ -22,6 +22,7 @@ services:
    - name: letsencrypt-issuer
    - name: contour
    - name: nfs-provisioner
+   - name: harbor
    - name: metallb
      options:
        metallb:
