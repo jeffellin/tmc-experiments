@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-contour-cluster-issuer
+  creationTimestamp: "2024-07-27T20:08:29Z"
+  generation: 1
+  labels:
+  name: minio-bitnami-api
+  namespace: flux-system
+spec:
+  rules:
+  - host: api.minio.lab.ellin.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: minio-bitnami
+            port:
+              name: minio-api
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - api.minio.lab.ellin.net
+    secretName: api.minio.lab.ellin.net-tls
