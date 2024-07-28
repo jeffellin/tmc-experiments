@@ -7,7 +7,7 @@ metadata:
   generation: 1
   labels:
   name: minio-bitnami-api
-  namespace: flux-system
+  namespace: minio
 spec:
   rules:
   - host: api.minio.lab.ellin.net
