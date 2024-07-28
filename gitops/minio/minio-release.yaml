@@ -27,7 +27,7 @@ spec:
   chartRef:
     kind: OCIRepository
     name: minio-bitnami
-    namespace: flux-system
+    namespace: minio
   values:
     persistence:
       storageClass: nfs-client
